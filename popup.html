@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Focus Lock</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Focus Lock</h1>
+      <button id="optionsBtn" title="Settings">⚙</button>
+    </header>
+
+    <section id="statusSection">
+      <div class="stat">
+        <span class="label">Time left this window</span>
+        <span class="value" id="remaining">–</span>
+      </div>
+      <div class="stat">
+        <span class="label">Window resets at</span>
+        <span class="value" id="windowEnds">–</span>
+      </div>
+      <div class="sitesList" id="sitesList"></div>
+    </section>
+
+    <section id="nuclearSection">
+      <h2>Nuclear option</h2>
+      <p class="hint">Blocks every website. Cannot be cancelled early.</p>
+      <div id="nuclearIdle">
+        <div class="row">
+          <input id="nuclearAmount" type="number" min="1" value="30" />
+          <select id="nuclearUnit">
+            <option value="minutes">minutes</option>
+            <option value="hours">hours</option>
+          </select>
+        </div>
+        <button id="nuclearBtn" class="danger">Block everything</button>
+      </div>
+      <div id="nuclearActive" class="hidden">
+        <div class="stat">
+          <span class="label">Everything blocked for</span>
+          <span class="value" id="nuclearRemaining">–</span>
+        </div>
+      </div>
+    </section>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

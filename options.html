@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Focus Lock Settings</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Focus Lock — Settings</h1>
+
+      <section>
+        <h2>Sites to limit</h2>
+        <p class="hint">One domain per line, e.g. <code>youtube.com</code>. Subdomains are included automatically.</p>
+        <textarea id="sites" rows="8" placeholder="youtube.com
+reddit.com
+twitter.com"></textarea>
+      </section>
+
+      <section>
+        <h2>Budget</h2>
+        <p class="hint">Allow up to</p>
+        <div class="row">
+          <input id="allowedMinutes" type="number" min="0" />
+          <span>minutes every</span>
+          <input id="windowHours" type="number" min="0.25" step="0.25" />
+          <span>hours</span>
+        </div>
+        <p class="hint">
+          The day is split into back-to-back windows of this length starting at midnight
+          (e.g. 2 hours → 00:00, 02:00, 04:00 …). The budget resets at the start of each window.
+        </p>
+      </section>
+
+      <button id="saveBtn">Save settings</button>
+      <span id="savedMsg" class="hidden">Saved ✓</span>
+    </main>
+    <script src="options.js"></script>
+  </body>
+</html>

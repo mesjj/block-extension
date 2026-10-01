@@ -1,0 +1,105 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  width: 300px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #1a1a1a;
+  background: #fafafa;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  background: #1f2937;
+  color: #fff;
+}
+header h1 {
+  font-size: 15px;
+  margin: 0;
+}
+header button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+section {
+  padding: 14px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+.stat .label {
+  font-size: 12px;
+  color: #666;
+}
+.stat .value {
+  font-size: 15px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.sitesList {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #888;
+  word-break: break-word;
+}
+h2 {
+  font-size: 13px;
+  margin: 0 0 4px;
+  color: #b91c1c;
+}
+.hint {
+  font-size: 11px;
+  color: #777;
+  margin: 0 0 10px;
+}
+.row {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.row input {
+  width: 70px;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.row select {
+  flex: 1;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+button.danger {
+  width: 100%;
+  padding: 9px;
+  background: #b91c1c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+button.danger:hover {
+  background: #991b1b;
+}
+button.danger.armed {
+  background: #7f1d1d;
+  animation: pulse 1s ease-in-out infinite;
+}
+@keyframes pulse {
+  50% { opacity: 0.72; }
+}
+.hidden {
+  display: none;
+}
+#nuclearActive .value {
+  color: #b91c1c;
+}
